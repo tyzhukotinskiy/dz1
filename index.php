@@ -8,6 +8,7 @@
 <body>
 <?php
 	require_once "goods.php";
+	require_once "header.php";
 	foreach($goods as $key_array => $value_array){
 		echo "<div class='good'>";
 		foreach($value_array as $k => $v){

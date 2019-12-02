@@ -1,6 +1,46 @@
 body {
+	font-family: Arial;
 	margin: 0;
 	padding: 0;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header#header {
+	background: #333;
+	color: #fff;
+	padding: 20px 40px;
+}
+
+header#header h2{
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+
+header#header ul{
+	display: inline-block;
+	list-style: none;
+	vertical-align: middle;
+	width: 40%;
+}
+
+header#header ul li{
+	float: left;
+}
+
+header#header ul li a{
+	display: block;
+	padding: 10px 25px;
+	text-decoration: none;
+}
+
+header#header ul li a:hover{
+	background-color: red;
+	color: #fff;
 }
 
 .good {
