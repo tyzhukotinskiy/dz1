@@ -1,7 +1,14 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Shop</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
 <?php
 	require_once "goods.php";
 	foreach($goods as $key_array => $value_array){
-		echo $key_array.': ';
 		echo "<div class='good'>";
 		foreach($value_array as $k => $v){
 			if($k == "image") echo "<img src='$v' alt='product picture'>";
@@ -19,3 +26,5 @@
 		echo "</div>";
 	}
 ?>
+</body>
+</html>
