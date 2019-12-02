@@ -13,7 +13,7 @@
 		foreach($value_array as $k => $v){
 			if($k == "image") echo "<img src='$v' alt='product picture'>";
 			if($k == "name") echo "<h4>$v</h4>";
-			if($k == "price") echo "<p>Price: $v</p>";
+			if($k == "price") echo "<p>Price: $v$</p>";
 			if($k == "description"){
 				$arr = explode("|", $v);
 				echo "<ul>";
