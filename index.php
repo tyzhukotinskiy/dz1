@@ -9,6 +9,8 @@
 <?php
 	require_once "goods.php";
 	require_once "header.php";
+	echo "<h1>Shop</h1>";
+	ob_start();
 	foreach($goods as $key_array => $value_array){
 		echo "<div class='good'>";
 		foreach($value_array as $k => $v){
@@ -26,6 +28,9 @@
 		}
 		echo "</div>";
 	}
+	$content = ob_get_contents();
+	ob_end_clean();
+	echo $content;
 ?>
 </body>
 </html>

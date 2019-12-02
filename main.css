@@ -9,6 +9,11 @@ body {
 	padding: 0;
 }
 
+h1{
+	margin: 20px 0;
+	text-align: center;
+}
+
 header#header {
 	background: #333;
 	color: #fff;
