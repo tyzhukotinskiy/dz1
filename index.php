@@ -8,6 +8,7 @@
 <body>
 <?php
 	require_once "component/goods.php";
+	require_once "component/quantity_goods.php";
 	require_once "component/header.php";
 	echo "<h1>Shop</h1>";
 	ob_start();
@@ -26,6 +27,7 @@
 				echo "</ul>";
 			}
 		}
+		echo "Количество: ".$quantity[$key_array].";";
 		echo "</div>";
 	}
 	$content = ob_get_contents();
