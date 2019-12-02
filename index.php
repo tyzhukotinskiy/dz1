@@ -3,18 +3,18 @@
 <head>
 	<title>Shop</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <?php
-	require_once "goods.php";
-	require_once "header.php";
+	require_once "component/goods.php";
+	require_once "component/header.php";
 	echo "<h1>Shop</h1>";
 	ob_start();
 	foreach($goods as $key_array => $value_array){
 		echo "<div class='good'>";
 		foreach($value_array as $k => $v){
-			if($k == "image") echo "<img src='$v' alt='product picture'>";
+			if($k == "image") echo "<img src='images/$v' alt='product picture'>";
 			if($k == "name") echo "<h4>$v</h4>";
 			if($k == "price") echo "<p>Price: $v$</p>";
 			if($k == "description"){
@@ -31,7 +31,7 @@
 	$content = ob_get_contents();
 	ob_end_clean();
 	echo $content;
-	require_once "footer.php";
+	require_once "component/footer.php";
 ?>
 </body>
 </html>
