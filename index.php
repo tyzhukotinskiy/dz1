@@ -31,6 +31,7 @@
 	$content = ob_get_contents();
 	ob_end_clean();
 	echo $content;
+	require_once "footer.php";
 ?>
 </body>
 </html>

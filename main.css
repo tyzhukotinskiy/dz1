@@ -63,3 +63,8 @@ header#header ul li a:hover{
 	font-size: 20px;
 	text-transform: uppercase;
 }
+
+footer#footer {
+	background-color: #45ddaa;
+	padding: 20px 40px;
+}
