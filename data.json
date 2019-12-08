@@ -1,10 +1,20 @@
 {
 	"1":{
-		"name":"Lego Mario!",
-		"price":90
+		"name":"Lego Hospital",
+		"image":"lego_clinick.jpg",
+		"price":90,
+		"description":"Детский конструктор лего с темой Госпиталя"
 	},
 	"2":{
-		"name":"Lego Hospital",
-		"price":80
+		"name":"Lego Minecraft Cave",
+		"image":"lego_minecraft.jpg",
+		"price":70,
+		"description":"Детский конструктор лего с темой Minecraft"
+	},
+	"3":{
+		"name":"Lego Harry Potter",
+		"image":"lego_harry_potter.jpg",
+		"price":230,
+		"description":"Детский конструктор лего с темой Гарри Поттера"
 	}
 }

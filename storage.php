@@ -1,6 +1,5 @@
 <?php
-	require_once 'logers.php';
-	Class storage{
+	Class Storage{
 		private $goods;
 		public function __construct(){
 			$g = file_get_contents('data.json');
@@ -13,23 +12,10 @@
 			$flag = false;
 			foreach($this->goods as $k => $v){
 				if($id == $k){
-					$flag = true;
-					print_r($v);
+					return $v;
 				}
 			}
-			if($flag) return $flag;
-			else{
-				throw new Exception("Такого продукта($id) не существует!");
-				return $flag;
-			}
+			if(!$flag) throw new Exception("Такого продукта($id) не существует!");
 		}
 	}
-	$r = new storage();
-	$goods = $r->showAll();
-	foreach($goods as $k => $v){
-		print_r($v);
-	}
-	$id = "3";
-	echo "Выберем товар: $id";
-	$r->getGood($id);
 ?>
