@@ -32,7 +32,7 @@
 		public static function myException($exception){
 			$date = date("F j, Y, g:i a");
 			echo "Преподобное исключение: ".$exception->getMessage().'<br />';
-			error_log("[$date] = Преподобное исключение", 3, 'erros.txt');
+			error_log("[$date] = Преподобное исключение: ".$exception->getMessage(), 3, 'erros.txt');
 		}
 	}
 ?>
