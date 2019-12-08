@@ -13,9 +13,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<?php require_once 'component/header.php'; ?>
 	<h1>Товары</h1>
 	<form action="view.php" method="post"><input type="submit" value="Получить все Товары" name="showAll"></form>
 	<form action="view.php" method="post">Номер товара<input type="text" name="idGood"><br /><input type="submit" name="GetGood" value="Посмотреть товар"></form>
@@ -36,6 +37,7 @@
 		<p><?=$g['description'];?></p>
 	<?php		
 		}
+		require_once 'component/footer.php';
 	?>
 </body>
 </html>

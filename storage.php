@@ -2,7 +2,7 @@
 	Class Storage{
 		private $goods;
 		public function __construct(){
-			$g = file_get_contents('data.json');
+			$g = file_get_contents('component/data.json');
 			$this->goods = json_decode($g, true);
 		}
 		public function showAll(){
