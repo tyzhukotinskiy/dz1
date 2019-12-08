@@ -7,4 +7,6 @@
 	function myException($exception){
 		Loger::myException($exception);
 	}
+	set_error_handler('myHandler');
+	set_exception_handler('myException');
 ?>
