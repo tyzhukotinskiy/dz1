@@ -1,8 +1,12 @@
 <?php
 class Auth{
-	private $login;
-	private $password;
+	public $login;
+	public $password;
 	public function isAuth(){
+		if(isset($_SESSION['name'], $_SESSION['password'])){
+			$this->login = $_SESSION['name'];
+			$this->password = $_SESSION['password'];
+		}
 		return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
 	}
 	public function authUser($login, $password){
@@ -16,7 +20,6 @@ class Auth{
 				$this->password = $password;
 				$_SESSION['name'] = $this->login;
 				$_SESSION['password'] = $this->password;
-				echo "Привет, ".$_SESSION['name'];
 				$flag = true;
 				break;
 			}
@@ -27,8 +30,11 @@ class Auth{
 		if($this->isAuth()){
 			$users = file_get_contents('users.json');
 			$users = json_decode( $users, true);
+
 			foreach($users as $k => $v){
-				if($this->login == $v['name']){ $users[$k]['name'] = $login; $this->login; break;}
+				if($this->login == $v['name']){echo $login; $users[$k]['name'] = $login; $this->login = $login;
+				$_SESSION['name'] = $this->login;
+				 break;}
 			}
 			print_r($users);
 			$str = json_encode($users);
@@ -40,13 +46,12 @@ class Auth{
 	}
 	public function logOut(){
 		if($this->isAuth()){
-			session_destroy();
+			unset($_SESSION['name']);
+			unset($_SESSION['password']);
+			header('Location: user.php');
 		}
-		echo "Куда уж выходить, если еще и не зашли!";
+		else echo "Куда уж выходить, если еще и не зашли!";
 
 	}
 }
-$user = new Auth();
-//$user->authUser("Href", "qwe");
-$user->setLogin("Dog");
 ?>
