@@ -2,31 +2,31 @@
 	"1":{
 		"name": "Lego 1",
 		"description": "description for Lego 1, some text",
-		"image": "ssilka",
+		"image": "/images/lego_1.jpg",
 		"price": "230"
 	},
 	"2":{
 		"name": "Lego 2",
 		"description": "description for Lego 2, some text",
-		"image": "ssilka",
+		"image": "/images/lego_2.jpg",
 		"price": "240"
 	},
 	"3":{
 		"name": "Lego 3",
 		"description": "description for Lego 3, some text",
-		"image": "ssilka",
+		"image": "/images/lego_3.jpg",
 		"price": "250"
 	},
 	"4":{
 		"name": "Lego 4",
 		"description": "description for Lego 4, some text",
-		"image": "ssilka",
+		"image": "/images/lego_4.jpg",
 		"price": "260"
 	},
 	"5":{
 		"name": "Lego 5",
 		"description": "description for Lego5, some text",
-		"image": "ssilka",
+		"image": "/images/lego_5.jpg",
 		"price": "270"
 	}
 }

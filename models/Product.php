@@ -7,7 +7,7 @@
 		private $description;
 		private $image;
 		private $price;
-		private $quantity;
+		private $quantity = 10;
 		private $storage;
 
 		public function __construct(){
@@ -16,12 +16,16 @@
 
 		public function getGoods(){
 			$goods = $this->storage->getGoods();
-			print_r($goods);
+			return $goods;
 		}
 
 		public function getGood($id){
 			$good = $this->storage->getGoodById($id);
 			return $good;
+		}
+
+		public function getQuantity(){
+			return $this->quantity;
 		}
 	}
 ?>

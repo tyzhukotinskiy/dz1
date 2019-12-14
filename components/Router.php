@@ -20,7 +20,6 @@
 			foreach($this->routes as $uriPattern => $path){
 				if(preg_match("~$uriPattern~", $uri)){
 					$internalRoute = preg_replace("~$uriPattern~", $path, $uri);
-
 					//очистка от пустых и лишних значений в виде дополнительной папки вначале пути
 					$segments = array_diff(explode('/', $internalRoute), array(''));
 					array_shift($segments);

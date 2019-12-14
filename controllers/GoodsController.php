@@ -4,17 +4,22 @@
 		private $product;
 
 		public static function actionIndex(){
-			echo "Controller GoodsController | | Action acionIndex<br />";
 			$product = new Product();
-			$product->getGoods();
+			$goods = $product->getGoods();
+			require_once ROOT.'/views/goods.php';
 			return true;
 		}
 
 		public static function actionProduct($id){
-			echo "Controller GoodsController | | Action acionProduct and product with id $id<br />";
 			$product = new Product();
 			$good = $product->getGood($id);
-			print_r($good);
+			require_once ROOT.'/views/product.php';
+			return true;
+		}
+
+		public static function actionToGoods(){
+			header("Location: /dz1/goods/");
+			exit;
 			return true;
 		}
 

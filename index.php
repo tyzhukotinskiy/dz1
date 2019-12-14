@@ -5,6 +5,7 @@
 
 	//подключение файлов системы
 	define('ROOT', dirname(__FILE__));
+	define('ROOTWEB', str_replace('\\', '/', ROOT));
 	require_once(ROOT.'/components/Router.php');
 
 	//Вызов роутера
